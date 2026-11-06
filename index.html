@@ -30,67 +30,134 @@ nav a{margin-right:16px}
 <body>
 <main>
 <h1>Aidic Privacy Policy</h1>
-<p>Last updated: 4 October 2026</p>
-<p>Aidic ("the app") is a vocabulary-learning app. This
-policy explains what data the app handles, where it goes, and the choices you
-have. It applies to the Android and iOS versions of the app.</p>
+<p>Last updated: 6 November 2026</p>
+<p>Aidic ("the app") is a vocabulary-learning app made by SSG Team. This
+policy explains what data the app handles, where it goes, how long it is kept,
+and the choices you have. It applies to the Android and iOS versions of the
+app.</p>
 <h2>Learning data stays on your device</h2>
 <p>Your saved words, review history, progress, goals, achievements, generated
 stories, readings and podcasts, and downloaded audio are stored locally on your
-device. Aidic does not sync them to any server. You can export a ZIP backup,
-restore it, or clear it at any time from Settings → Data management.
-Uninstalling the app deletes this data.</p>
+device. Aidic does not sync them to any server. You can export a ZIP backup or
+restore one from Settings → Data management, and clear cached audio and images
+there. Uninstalling the app deletes this data.</p>
 <h2>AI requests</h2>
 <p>When you use an AI feature (word explanations, quizzes, stories, readings,
 podcasts, conversation practice, text-to-speech or pronunciation feedback), the
 content of that request is sent to the AI provider that answers it:</p>
 <ul>
-<li><strong>OpenAI</strong> (text, speech synthesis, and — only when you use pronunciation
-  practice — a short recording of your voice for transcription),</li>
-<li><strong>Anthropic</strong>, or</li>
-<li><strong>Google</strong> (Gemini),</li>
+<li><strong>Aidic AI</strong> (the AI included with an Aidic account) uses <strong>OpenAI</strong> only.</li>
+<li><strong>Your own API key</strong> ("bring your own key") can be for <strong>OpenAI</strong>,
+  <strong>Anthropic</strong> or <strong>Google</strong> (Gemini); requests go only to that key's
+  provider. The key is stored in the device's secure storage (Keychain /
+  Android Keystore).</li>
 </ul>
-<p>depending on which provider is configured. Requests contain the words and text
-needed for the task; they do not include your name or contact details. Each
-provider processes requests under its own privacy policy and API data terms.</p>
-<p>If you use your own API key ("bring your own key"), the key is stored in the
-device's secure storage (Keychain / Android Keystore) and is sent only to that
-key's provider.</p>
+<p>Requests contain the text needed for the task: the words and text you look up
+or type, chat messages and text you import. Only when you use pronunciation
+practice, a short recording of your voice is sent to OpenAI to transcribe it.
+Requests do not include your name or contact details. Aidic AI requests carry
+a one-way hashed account identifier that helps OpenAI detect abuse.</p>
+<p><strong>Your permission comes first.</strong> Before the first request to any of these AI
+providers, the app asks whether you allow it (Allow / Don't allow). You can
+change your choice at any time in Settings → Privacy → "Share requests with AI
+providers". While sharing is off, cloud AI features are turned off and nothing
+is sent to these providers.</p>
+<h2>Apple Intelligence</h2>
+<p>On supported Apple devices, short AI tasks can run on Apple's on-device model
+or on Apple Private Cloud Compute. These requests are processed by Apple under
+Apple's privacy terms; they are not sent to Aidic's servers or to the AI
+providers above, and they do not need the in-app AI-sharing permission.</p>
 <h2>Optional account</h2>
-<p>Signing in (with Google or Apple) is optional. It is needed for AI managed by
-the app and for purchases. When you sign in, Google Firebase Authentication and
-Aidic's Firebase backend process:</p>
+<p>Signing in (with Google or Apple) is optional. It is needed for Aidic AI and for
+purchases. When you sign in, Google Firebase Authentication and Aidic's Firebase
+backend process:</p>
 <ul>
 <li>an account identifier and the email address supplied by the sign-in
   provider,</li>
 <li>your plan and purchase status (purchases are verified with Google Play or
   the App Store; Aidic never sees your payment details),</li>
-<li>AI usage counts, used to enforce your plan's allowance and prevent abuse.</li>
+<li>AI usage counts and short-term rate-limit records, used to enforce your
+  plan's allowance and prevent abuse,</li>
+<li>the AI key currently lent to your account for Aidic AI,</li>
+<li>a random identifier created by the app on each device, with the platform and
+  app version, used to limit how many devices share one account (not to track
+  you).</li>
 </ul>
 <p>Firebase App Check is used to confirm that requests come from a genuine copy of
 the app.</p>
 <h2>Microphone</h2>
-<p>The microphone is used only while you hold the record button in pronunciation
-practice. The recording is sent for transcription as described above and is
-not stored by Aidic.</p>
+<p>The microphone is used only in pronunciation practice: recording starts when
+you tap the record button and stops when you tap it again. The recording is
+sent to OpenAI only to transcribe it; the score is worked out on your device.
+Aidic does not store the recording on any server.</p>
 <h2>Notifications</h2>
 <p>If you allow notifications, review reminders are scheduled on your device. No
 notification content is sent to a server.</p>
+<h2>Who receives data and how it is protected</h2>
+<p>Aidic shares data only with these service providers, and only for the purposes
+described above:</p>
+<ul>
+<li><strong>OpenAI</strong>: AI requests for Aidic AI and for your own OpenAI key, including
+  pronunciation recordings for transcription.</li>
+<li><strong>Anthropic</strong> and <strong>Google</strong> (Gemini): AI requests, only with your own key for
+  that provider.</li>
+<li><strong>Google Firebase</strong>: sign-in, purchase verification, usage limits and App
+  Check.</li>
+<li><strong>Apple</strong>: App Store purchases and, on supported devices, Apple Intelligence.
+  <strong>Google Play</strong> verifies purchases on Android.</li>
+</ul>
+<p>We only share data with providers that are bound by terms providing the same
+or equal protection of your data as stated in this policy and as required by
+Apple's App Store Review Guidelines. Each provider processes the data under its
+own privacy policy and API data terms.</p>
 <h2>What Aidic does not do</h2>
 <ul>
 <li>No advertising and no advertising identifiers.</li>
 <li>No selling or sharing of personal data with data brokers.</li>
 <li>No tracking across other apps or websites.</li>
 </ul>
-<h2>Data retention and deletion</h2>
-<p>Learning data remains on your device until you delete it or uninstall the app.
-Account data is kept while your account exists.</p>
-<p>To delete your account, open Settings → Delete account in the app. This removes
-your sign-in account immediately. Words saved on your device are not affected.
-The plan and AI-usage records linked to the account on Aidic's server are
-erased when you email a deletion request to the address below; we complete it
-within 30 days. Records of verified store purchases may be kept where needed
-for refunds, fraud prevention and tax obligations. Full steps:
+<h2>Your choices and withdrawing consent</h2>
+<ul>
+<li><strong>AI sharing:</strong> turn off Settings → Privacy → "Share requests with AI
+  providers" at any time.</li>
+<li><strong>Notifications:</strong> turn off the daily reminder in Settings, or turn off
+  notifications for Aidic in your device's system settings.</li>
+<li><strong>Microphone:</strong> turn off microphone access for Aidic in your device's system
+  settings (on iPhone: Settings → Privacy &amp; Security → Microphone).</li>
+<li><strong>Account:</strong> sign out at any time, or delete your account as described below.</li>
+</ul>
+<h2>Data retention</h2>
+<ul>
+<li><strong>Learning data on your device:</strong> kept until you delete it or uninstall the
+  app.</li>
+<li><strong>AI request content and voice recordings:</strong> not stored on Aidic's servers.
+  A recording is kept only as a temporary file on your device. AI providers
+  keep requests only as long as their API data terms allow.</li>
+<li><strong>Account data</strong> (sign-in account, plan and entitlement, usage counts,
+  rate-limit records, device records, AI key lease): kept while your account
+  exists, and deleted when you delete the account.</li>
+<li><strong>Records of verified store purchases:</strong> kept only as long as needed for
+  refunds, fraud prevention and tax obligations. When you delete your account,
+  their link to it is removed and replaced by a one-way hash.</li>
+<li><strong>Server logs:</strong> kept for 30 days for security and troubleshooting.</li>
+<li>If an account was blocked for abuse, that decision is kept as an operator
+  record after the account is deleted.</li>
+</ul>
+<h2>Deleting your account</h2>
+<p>Open Settings → Account → Delete account in the app and confirm. Deletion is
+immediate:</p>
+<ul>
+<li>For Sign in with Apple accounts, the app first revokes Apple's sign-in
+  tokens for Aidic.</li>
+<li>Aidic's server then deletes your plan and entitlement, AI usage counts,
+  device records, AI key lease and rate-limit records, and deletes your sign-in
+  account.</li>
+<li>Records of verified store purchases are kept as described above, with the
+  link to your account removed.</li>
+</ul>
+<p>Deleting your account does not cancel a store subscription; cancel it in your
+Apple ID or Google Play settings. Words saved on your device are not affected;
+uninstall the app to remove them. Full steps:
 https://sang89vh.github.io/aidic/support/#delete-account</p>
 <h2>Children</h2>
 <p>Aidic is not directed at children under 13 and does not knowingly collect
@@ -102,6 +169,7 @@ are kept in the platform's secure storage.</p>
 <p>If this policy changes, the updated version will be posted at this address with
 a new "Last updated" date.</p>
 <h2>Contact</h2>
+<p>Questions about this policy or your data:</p>
 <p>Email: sang89vh@icloud.com
 Phone: +84 356 054 323</p>
 <nav><a href="support/">Support</a></nav>
